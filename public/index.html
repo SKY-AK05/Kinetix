@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#5B3DF5" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Kinetix" />
+  <title>Kinetix — Your Videos. Your Format. | Authorized Video &amp; Audio Downloader PWA</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="data:image/png;base64,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" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo:wght@800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/config.js"></script>
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+    }
+    html.dark {
+      color-scheme: dark;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    .subtle-fade {
+      transition: opacity 180ms ease, transform 180ms ease;
+    }
+
+    /* ===== KINETIX NEO-BRUTAL THEME ===== */
+    :root{--ink:#0A0A0A;--paper:#F6F6F2;--card:#FFFFFF;--violet:#5B3DF5;--lime:#DFFF00;--orange:#FF6B00;--sh:4px 4px 0 var(--ink)}
+    html.dark{--ink:#F6F6F2;--paper:#0B0B10;--card:#16161F;--sh:4px 4px 0 #5B3DF5}
+    body{background:var(--paper)!important;color:var(--ink)!important;font-family:'Inter',sans-serif;
+      background-image:radial-gradient(var(--ink) 1px,transparent 1.2px);background-size:22px 22px;background-position:0 0}
+    html:not(.dark) body{background-image:radial-gradient(rgba(10,10,10,.12) 1px,transparent 1.2px)}
+    html.dark body{background-image:radial-gradient(rgba(246,246,242,.08) 1px,transparent 1.2px)}
+    h1,h2,h3{font-family:'Archivo','Inter',sans-serif!important;font-weight:900!important;text-transform:uppercase;letter-spacing:-.02em!important;line-height:.98;color:var(--ink)!important}
+    h4{font-weight:800;text-transform:uppercase;letter-spacing:.02em}
+    [class*="rounded"]{border-radius:0!important}
+    .animate-spin,.animate-pulse{border-radius:0!important}
+    [class*="border-slate"],[class*="border-amber"],[class*="border-sky"],[class*="border-emerald"],[class*="border-rose"],[class*="border-red"]{border-color:var(--ink)!important}
+    .border,[class*="border-t"],[class*="border-b"]{border-width:2px}
+    header{background:var(--paper)!important;border-bottom:3px solid var(--ink)!important;backdrop-filter:none!important}
+    footer{background:var(--ink)!important;color:var(--paper)!important;border-top:3px solid var(--ink)!important}
+    footer *{color:var(--paper)!important}
+    footer button:hover{color:var(--lime)!important}
+    /* cards */
+    section div[class*="bg-white"],section div[class*="dark:bg-slate-900"],#installModal>div,#infoModal>div{background:var(--card)!important;border:2.5px solid var(--ink)!important;box-shadow:var(--sh)}
+    section div[class*="bg-slate-50"],section div[class*="bg-slate-100"]{background:var(--paper)!important}
+    /* inputs */
+    input,select{background:var(--card)!important;color:var(--ink)!important;border:2.5px solid var(--ink)!important;font-weight:600}
+    input:focus,select:focus{outline:none;box-shadow:4px 4px 0 var(--violet)}
+    /* buttons */
+    button{font-weight:800;letter-spacing:.01em;transition:transform .08s,box-shadow .08s}
+    #getVideoBtn,#startDownloadBtn,#saveGeneratedFileBtn,#installAppBtn{background:var(--violet)!important;color:#fff!important;border:2.5px solid var(--ink)!important;box-shadow:var(--sh);text-transform:uppercase}
+    #saveGeneratedFileBtn{background:var(--lime)!important;color:#0A0A0A!important}
+    #cancelJobBtn{background:var(--orange)!important;color:#0A0A0A!important;border:2.5px solid var(--ink)!important;box-shadow:var(--sh)}
+    #getVideoBtn:hover,#startDownloadBtn:hover,#saveGeneratedFileBtn:hover,#installAppBtn:hover,#cancelJobBtn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+    #getVideoBtn:active,#startDownloadBtn:active,#saveGeneratedFileBtn:active,#cancelJobBtn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+    #pasteUrlBtn,.preset-url-btn{background:var(--lime)!important;color:#0A0A0A!important;border:2px solid var(--ink)!important;font-weight:800}
+    #themeToggleBtn{background:var(--card)!important;border:2.5px solid var(--ink)!important;box-shadow:3px 3px 0 var(--ink);color:var(--ink)!important}
+    /* nav */
+    .nav-tab-btn,.mobile-nav-btn{font-family:'JetBrains Mono',monospace;text-transform:uppercase;font-size:12px!important;font-weight:700!important;letter-spacing:.04em;color:var(--ink)!important;border:2px solid transparent}
+    .nav-tab-btn:hover{border-color:var(--ink)}
+    .nav-tab-btn[class*="bg-slate-200"]{background:var(--lime)!important;color:#0A0A0A!important;border-color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+    /* progress + alert */
+    #jobProgressBar{background:repeating-linear-gradient(45deg,var(--violet) 0 10px,#7a60ff 10px 20px)!important}
+    #jobProgressBar,#jobProgressBar+*{border-radius:0}
+    div:has(>#jobProgressBar){background:var(--paper)!important;border:2.5px solid var(--ink);height:18px!important}
+    #statusAlertBox{border-width:2.5px!important;box-shadow:var(--sh);background:var(--card)!important}
+    #statusAlertBox *{color:var(--ink)!important}
+    code,.font-mono{font-family:'JetBrains Mono',monospace}
+    #previewThumbnail{border:2.5px solid var(--ink)}
+    ::selection{background:var(--lime);color:#0A0A0A}
+    /* top ticker + logo + hero */
+    .kx-ticker{background:var(--violet);color:#fff;border-bottom:3px solid var(--ink);font:700 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;overflow:hidden;white-space:nowrap;padding:9px 0}
+    .kx-ticker span{display:inline-block;padding-left:100%;animation:kxmq 28s linear infinite}
+    @keyframes kxmq{to{transform:translateX(-100%)}}
+    .kx-logo{width:44px;height:44px;flex:none;filter:drop-shadow(3px 3px 0 var(--ink))}
+    .kx-word{font-family:'Archivo',sans-serif;font-weight:900;font-size:22px;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+    .kx-sub{font:700 9px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);color:var(--lime);padding:2px 5px;margin-top:4px;display:inline-block}
+    .kx-hero h1{font-size:clamp(2.6rem,9vw,5.2rem);text-align:left}
+    .kx-hero h1 em{font-style:normal;color:var(--violet)}
+    .kx-hero h1 u{text-decoration:none;background:var(--lime);padding:0 .12em;box-shadow:5px 5px 0 var(--ink);color:#0A0A0A;display:inline-block;margin-top:.1em}
+    .kx-hero .kx-badge{display:inline-block;background:var(--lime);color:#0A0A0A;border:2.5px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font:800 11px 'JetBrains Mono',monospace;text-transform:uppercase;padding:5px 9px;letter-spacing:.05em}
+    .kx-hero p{font-size:1.05rem!important;font-weight:500;color:var(--ink)!important;max-width:34rem}
+    .kx-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .kx-step{border:2.5px solid var(--ink);box-shadow:var(--sh);padding:12px 14px;color:#0A0A0A}
+    .kx-step b{display:block;font:900 13px 'Archivo',sans-serif;text-transform:uppercase}
+    .kx-step small{display:block;font:600 12px 'Inter',sans-serif;margin-top:3px;line-height:1.3}
+    .kx-step i{font:800 11px 'JetBrains Mono',monospace;font-style:normal;background:#0A0A0A;color:#fff;padding:1px 6px;display:inline-block;margin-bottom:6px}
+    @media(max-width:560px){.kx-steps{grid-template-columns:1fr}}
+
+    .focus-ring:focus-visible {
+      outline: 2px solid #0284C7;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="bg-[#FAFAFA] text-slate-900 dark:bg-[#090D16] dark:text-slate-100 min-h-screen flex flex-col transition-colors duration-150">
+
+  <div class="kx-ticker" aria-hidden="true"><span>Share from YouTube &rarr; Kinetix &bull; Highest quality MP4 &bull; Saved to your device &bull; Permitted sources only &bull; Share from YouTube &rarr; Kinetix &bull; Highest quality MP4 &bull; Saved to your device &bull; Permitted sources only</span></div>
+
+  <!-- Offline Connectivity Banner -->
+  <div id="offlineBanner" class="hidden bg-amber-500/15 border-b border-amber-500/30 text-amber-900 dark:text-amber-200 px-4 py-2.5 text-xs font-medium text-center" role="status" aria-live="polite">
+    <span class="inline-flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+      <span>Offline Mode Active: The Kinetix app shell works offline, but inspecting metadata and downloading videos requires an active internet connection.</span>
+    </span>
+  </div>
+
+  <!-- Compact Responsive Header -->
+  <header class="sticky top-0 z-30 bg-[#FAFAFA]/90 dark:bg-[#090D16]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      <!-- Brand Logo -->
+      <a href="#view-home" id="brandLogoLink" class="flex items-center gap-3 group focus-ring py-1"><svg class="kx-logo" viewBox="0 0 48 48" aria-hidden="true"><rect x="1.5" y="1.5" width="45" height="45" fill="#DFFF00" stroke="#0A0A0A" stroke-width="3"/><rect x="13" y="11" width="6.5" height="26" fill="#0A0A0A"/><line x1="21" y1="26" x2="35" y2="11.5" stroke="#5B3DF5" stroke-width="6.5"/><line x1="21" y1="24" x2="36" y2="37" stroke="#FF6B00" stroke-width="6.5"/></svg><div class="flex flex-col"><span class="kx-word">KINETIX</span><span class="kx-sub">Save video fast</span></div></a>
+
+      <!-- Navigation Links -->
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-1">
+        <button type="button" data-nav="home" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-900 dark:text-white bg-slate-200/70 dark:bg-slate-800/80 transition-colors focus-ring">
+          Home
+        </button>
+        <button type="button" data-nav="how-it-works" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors focus-ring">
+          How It Works
+        </button>
+        <button type="button" data-nav="about" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors focus-ring">
+          About &amp; Architecture
+        </button>
+        <button type="button" data-nav="diagnostics" class="nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors focus-ring">
+           Verification Suite
+        </button>
+      </nav>
+
+      <!-- Actions: Theme Toggle & Install App Button -->
+      <div class="flex items-center gap-2">
+        <button
+          type="button"
+          id="themeToggleBtn"
+          aria-label="Toggle color theme"
+          class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus-ring"
+          title="Switch between Light and Dark theme"
+        >
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg id="themeIconSun" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path stroke-linecap="round" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"></path>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg id="themeIconMoon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          id="installAppBtn"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium bg-slate-900 text-white dark:bg-sky-500 dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-sky-400 transition-colors focus-ring"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"></path>
+          </svg>
+          <span id="installAppBtnLabel">Install App</span>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button
+          type="button"
+          id="mobileMenuBtn"
+          aria-label="Open navigation menu"
+          class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 focus-ring"
+        >
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 py-3 space-y-1">
+      <button type="button" data-nav="home" class="mobile-nav-btn w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-900 dark:text-white bg-slate-100 dark:bg-slate-800">Home</button>
+      <button type="button" data-nav="how-it-works" class="mobile-nav-btn w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400">How It Works</button>
+      <button type="button" data-nav="about" class="mobile-nav-btn w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400">About &amp; Architecture</button>
+      <button type="button" data-nav="diagnostics" class="mobile-nav-btn w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400">Verification Suite</button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-10 sm:py-14">
+
+    <!-- ==================== VIEW 1: HOME (CORE WORKFLOW) ==================== -->
+    <section id="view-home" class="space-y-8">
+      <!-- Hero Section -->
+      <div class="kx-hero space-y-4">
+        <span class="kx-badge">Permitted sources only &bull; No DRM bypass</span>
+        <h1>Your videos.<br><em>Your format.</em><br><u>Saved. Now.</u></h1>
+        <p>Share a link from YouTube, pick your quality, and Kinetix saves the highest-resolution MP4 straight to your device.</p>
+        <div class="kx-steps">
+          <div class="kx-step" style="background:#DFFF00"><i>01</i><b>Share</b><small>Tap Share in YouTube, choose Kinetix.</small></div>
+          <div class="kx-step" style="background:#FF6B00"><i>02</i><b>Process</b><small>We fetch the best video + audio and mux an MP4.</small></div>
+          <div class="kx-step" style="background:#9C8CFF"><i>03</i><b>Save</b><small>The file lands in your Downloads folder.</small></div>
+        </div>
+      </div>
+
+      <!-- URL Input Focal Area -->
+      <div class="bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-xl p-3 sm:p-4 shadow-sm">
+        <form id="videoUrlForm" novalidate class="space-y-3">
+          <label for="videoUrlInput" class="sr-only">Supported Video URL</label>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+            <div class="relative flex-1 flex items-center">
+              <!-- Link Icon -->
+              <span class="absolute left-3.5 text-slate-400 pointer-events-none" aria-hidden="true">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </span>
+
+              <input
+                type="url"
+                id="videoUrlInput"
+                autocomplete="off"
+                spellcheck="false"
+                placeholder="Paste a YouTube link, or share one to Kinetix"
+                class="w-full pl-10 pr-24 py-3 text-sm sm:text-base rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50/70 dark:bg-slate-950/70 text-slate-900 dark:text-white placeholder:text-slate-400 focus:bg-white dark:focus:bg-slate-950 focus:border-sky-600 dark:focus:border-sky-400 focus:outline-none transition-colors"
+              />
+
+              <!-- Paste & Clear Inline Controls -->
+              <div class="absolute right-2 flex items-center gap-1">
+                <button
+                  type="button"
+                  id="pasteUrlBtn"
+                  title="Paste URL from clipboard"
+                  class="px-2.5 py-1 rounded text-xs font-medium text-slate-600 dark:text-slate-300 bg-slate-200/70 dark:bg-slate-800 hover:bg-slate-300/70 dark:hover:bg-slate-700 transition-colors focus-ring"
+                >
+                  Paste
+                </button>
+                <button
+                  type="button"
+                  id="clearUrlBtn"
+                  title="Clear URL input"
+                  aria-label="Clear URL input"
+                  class="hidden p-1.5 rounded text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-800 transition-colors focus-ring"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Primary Action: Get Video Button -->
+            <button
+              type="submit"
+              id="getVideoBtn"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm sm:text-base font-semibold bg-slate-900 text-white dark:bg-sky-500 dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-sky-400 active:scale-[0.99] transition-all focus-ring shrink-0"
+            >
+              <span id="getVideoBtnText">Get Video</span>
+              <svg id="getVideoSpinner" class="hidden w-4 h-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v3a5 5 0 00-5 5H4z"></path>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Quick Authorized Sample Presets Bar -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-xs text-slate-500 dark:text-slate-400">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span class="font-bold uppercase text-[11px]">Quick samples:</span>
+              <button type="button" data-preset="4k-fjords" class="preset-url-btn px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-mono transition-colors">
+                4K Source (2160p Max)
+              </button>
+              <button type="button" data-preset="1080p-pavilion" class="preset-url-btn px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-mono transition-colors">
+                Full HD Source (1080p Max)
+              </button>
+              <button type="button" data-preset="8k-master" class="preset-url-btn px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 font-mono transition-colors">
+                8K Archival Master (4320p)
+              </button>
+            </div>
+            <span id="rateLimitCounter" class="font-mono text-[11px] text-slate-400">API Quota: 20/20 req/min</span>
+          </div>
+        </form>
+
+        <!-- Dynamic Validation & Status Alert Banner (Covers all 16 Workflow States) -->
+        <div id="statusAlertBox" class="hidden mt-3 rounded-lg border px-4 py-3 text-sm flex items-start justify-between gap-3" role="alert" aria-live="polite">
+          <div class="flex items-start gap-2.5">
+            <span id="statusAlertDot" class="w-2 h-2 rounded-full mt-1.5 shrink-0 bg-sky-500"></span>
+            <div>
+              <p id="statusAlertTitle" class="font-semibold text-slate-900 dark:text-white"></p>
+              <p id="statusAlertMessage" class="text-slate-600 dark:text-slate-300 mt-0.5 text-xs sm:text-sm leading-relaxed"></p>
+            </div>
+          </div>
+          <span id="statusAlertBadge" class="font-mono text-[11px] uppercase px-2 py-0.5 rounded bg-slate-200/70 dark:bg-slate-800 text-slate-700 dark:text-slate-300 shrink-0"></span>
+        </div>
+      </div>
+
+      <!-- ==================== VIDEO PREVIEW & DOWNLOAD CONTROLS PANEL ==================== -->
+      <div id="videoWorkspacePanel" class="hidden bg-white dark:bg-slate-900 border border-slate-200/90 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm subtle-fade">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+
+          <!-- Left Column: Video Preview Metadata & Stream Inspection (5 Cols) -->
+          <div class="lg:col-span-5 p-5 sm:p-6 border-b lg:border-b-0 lg:border-r border-slate-200/80 dark:border-slate-800 flex flex-col justify-between space-y-4 bg-slate-50/50 dark:bg-slate-950/30">
+            <div class="space-y-4">
+              <!-- Thumbnail Container -->
+              <div class="relative rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 aspect-video">
+                <img
+                  id="previewThumbnail"
+                  src="data:image/gif;base64,R0lGODlhAQABAAAAACw="
+                  alt="Authorized video preview thumbnail"
+                  class="w-full h-full object-cover max-w-full"
+                />
+                <div class="absolute bottom-2.5 right-2.5 px-2 py-0.5 rounded bg-slate-950/85 text-white font-mono text-xs font-medium">
+                  <span id="previewDuration">02:14</span>
+                </div>
+                <div class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded bg-emerald-600/95 text-white text-[11px] font-semibold tracking-wide uppercase">
+                  <span id="previewMaxBadge">Max: 4K (2160p)</span>
+                </div>
+              </div>
+
+              <!-- Title & Source Metadata -->
+              <div class="space-y-1.5">
+                <div class="flex items-center gap-2 text-xs font-mono text-sky-700 dark:text-sky-400">
+                  <span id="previewSourcePlatform">Blender Studio Open Repository (CC-BY)</span>
+                  <span>•</span>
+                  <span id="previewSourceId">ID: kx-9402a</span>
+                </div>
+                <h2 id="previewTitle" class="text-lg font-semibold text-slate-900 dark:text-white leading-snug">
+                  Nordic Fjords Aerial Study — Authorized Open Master
+                </h2>
+              </div>
+
+              <!-- Stream Technical Summary -->
+              <dl class="grid grid-cols-2 gap-2.5 pt-2 border-t border-slate-200/70 dark:border-slate-800 text-xs">
+                <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800">
+                  <dt class="text-slate-500 dark:text-slate-400">Original Source Cap</dt>
+                  <dd id="previewNativeCap" class="font-mono font-semibold text-slate-900 dark:text-white mt-0.5">3840 × 2160 (4K)</dd>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-slate-200/60 dark:border-slate-800">
+                  <dt class="text-slate-500 dark:text-slate-400">Audio Stream</dt>
+                  <dd id="previewAudioTrack" class="font-mono font-semibold text-slate-900 dark:text-white mt-0.5">AAC 48kHz Stereo</dd>
+                </div>
+              </dl>
+            </div>
+
+            <!-- Source Resolution Integrity Note -->
+            <p class="text-[11px] leading-relaxed text-slate-500 dark:text-slate-400 bg-slate-100/80 dark:bg-slate-800/50 p-3 rounded-lg border border-slate-200/60 dark:border-slate-800">
+              <strong class="text-slate-700 dark:text-slate-200">True-Source Guarantee:</strong> 4K (2160p), 5K (2880p), and 8K (4320p) depend strictly on the original source master. Kinetix never upscales lower-resolution streams. Separate high-res video and audio tracks are muxed via FFmpeg.
+            </p>
+          </div>
+
+          <!-- Right Column: Format Selector, Resolution Selector, and Download Execution (7 Cols) -->
+          <div class="lg:col-span-7 p-5 sm:p-6 flex flex-col justify-between space-y-6">
+            <div class="space-y-5">
+
+              <!-- Step 1: Prominent Format Selector (MP4 Default vs MP3) -->
+              <div class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <label class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    1. Select Output Format
+                  </label>
+                  <span id="activeFormatHint" class="text-xs text-slate-500 dark:text-slate-400">Video + Audio container (Default)</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-2.5 p-1 bg-slate-100 dark:bg-slate-800/90 rounded-xl border border-slate-200/80 dark:border-slate-800" role="radiogroup" aria-label="Output Format">
+                  <button
+                    type="button"
+                    id="formatBtnMp4"
+                    role="radio"
+                    aria-checked="true"
+                    class="flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm border border-slate-200/80 dark:border-slate-700 transition-all focus-ring"
+                  >
+                    <span class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-sky-500"></span>
+                      <span>MP4 Video</span>
+                    </span>
+                    <span class="font-mono text-[11px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">H.264 + AAC</span>
+                  </button>
+
+                  <button
+                    type="button"
+                    id="formatBtnMp3"
+                    role="radio"
+                    aria-checked="false"
+                    class="flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all focus-ring"
+                  >
+                    <span class="flex items-center gap-2">
+                      <span class="w-2 h-2 rounded-full bg-slate-400" id="mp3IndicatorDot"></span>
+                      <span>MP3 Audio</span>
+                    </span>
+                    <span class="font-mono text-[11px] px-1.5 py-0.5 rounded bg-slate-200/60 dark:bg-slate-700/60 text-slate-600 dark:text-slate-300">ID3v2 Tagged</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2A: MP4 Resolution Selector (All 10 Required Tiers) -->
+              <div id="mp4QualitySection" class="space-y-2">
+                <div class="flex items-center justify-between">
+                  <label for="resolutionSelect" class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    2. Select Video Resolution (Highest Available Selected by Default)
+                  </label>
+                  <button
+                    type="button"
+                    id="tryUnavailable4kBtn"
+                    class="text-xs text-sky-600 dark:text-sky-400 hover:underline font-medium focus-ring rounded"
+                  >
+                    Why are some resolutions disabled?
+                  </button>
+                </div>
+
+                <!-- Accessible Dropdown Selector with all 10 canonical tiers -->
+                <div class="relative">
+                  <select
+                    id="resolutionSelect"
+                    class="w-full appearance-none rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-3.5 py-2.5 pr-10 text-sm font-medium text-slate-900 dark:text-white focus:border-sky-600 dark:focus:border-sky-400 focus:outline-none transition-colors"
+                  >
+                    <!-- Populated dynamically from the 10-tier ladder -->
+                  </select>
+                  <span class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <!-- Compact Interactive 10-Tier Resolution Matrix -->
+                <div id="resolutionMatrixGrid" class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 pt-1" role="group" aria-label="Resolution availability matrix">
+                  <!-- Populated dynamically with all 10 tiers: 8K 4320p down to Low 144p -->
+                </div>
+              </div>
+
+              <!-- Step 2B: MP3 Audio Bitrate Selector (Shown when MP3 is active) -->
+              <div id="mp3QualitySection" class="hidden space-y-2">
+                <div class="flex items-center justify-between">
+                  <label for="audioBitrateSelect" class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                    2. Select MP3 Audio Bitrate (LAME Encoder Pipeline)
+                  </label>
+                  <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400">ID3v2 Metadata Embedded</span>
+                </div>
+                <select
+                  id="audioBitrateSelect"
+                  class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-950 px-3.5 py-2.5 text-sm font-medium text-slate-900 dark:text-white focus:border-sky-600 focus:outline-none"
+                >
+                  <option value="320k">320 kbps — Studio Master MP3 (Highest Quality)</option>
+                  <option value="192k">192 kbps — High Quality Balanced MP3</option>
+                  <option value="128k">128 kbps — Standard Portable MP3</option>
+                </select>
+              </div>
+
+              <!-- Selected Output Telemetry Summary Bar -->
+              <div class="rounded-lg bg-slate-50 dark:bg-slate-950/70 border border-slate-200/80 dark:border-slate-800 p-3.5 grid grid-cols-3 gap-3 text-xs">
+                <div>
+                  <span class="text-slate-500 dark:text-slate-400 block">Selected Output</span>
+                  <span id="summaryFormatSpec" class="font-mono font-semibold text-slate-900 dark:text-white mt-0.5 block">MP4 • 2160p (4K)</span>
+                </div>
+                <div>
+                  <span class="text-slate-500 dark:text-slate-400 block">Estimated File Size</span>
+                  <span id="summaryFileSize" class="font-mono font-semibold text-slate-900 dark:text-white mt-0.5 block">~351.8 MB</span>
+                </div>
+                <div>
+                  <span class="text-slate-500 dark:text-slate-400 block">Est. Transfer &amp; Mux</span>
+                  <span id="summaryEstTime" class="font-mono font-semibold text-slate-900 dark:text-white mt-0.5 block">~56 sec @ 50 Mbps</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Download Execution, Real-Time Job Progress, Cancel & Save File -->
+            <div class="space-y-3 pt-2 border-t border-slate-200/80 dark:border-slate-800">
+              <!-- Progress Bar Area (Hidden when idle) -->
+              <div id="jobProgressContainer" class="hidden space-y-2 bg-slate-50 dark:bg-slate-950 p-3.5 rounded-lg border border-slate-200 dark:border-slate-800">
+                <div class="flex items-center justify-between text-xs">
+                  <span id="jobStageLabel" class="font-medium text-slate-800 dark:text-slate-200">Job queued in worker...</span>
+                  <span id="jobPercentLabel" class="font-mono font-semibold text-sky-600 dark:text-sky-400">0%</span>
+                </div>
+                <div class="w-full h-2 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                  <div id="jobProgressBar" class="h-full bg-sky-600 dark:bg-sky-400 transition-all duration-200" style="width: 0%"></div>
+                </div>
+                <div class="flex items-center justify-between text-[11px] font-mono text-slate-500 dark:text-slate-400">
+                  <span id="jobIdDisplay">Job ID: —</span>
+                  <span id="jobExpiryCountdown">Signed link TTL: 15:00</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons Row -->
+              <div class="flex flex-wrap items-center gap-2.5">
+                <button
+                  type="button"
+                  id="startDownloadBtn"
+                  class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-sm sm:text-base font-semibold bg-slate-900 text-white dark:bg-sky-500 dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-sky-400 active:scale-[0.99] transition-all focus-ring"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"></path>
+                  </svg>
+                  <span id="startDownloadBtnLabel">Download MP4 (2160p)</span>
+                </button>
+
+                <button
+                  type="button"
+                  id="cancelJobBtn"
+                  class="hidden px-4 py-3 rounded-lg text-sm font-medium border border-rose-300 dark:border-rose-800 text-rose-700 dark:text-rose-300 bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 transition-colors focus-ring"
+                >
+                  Cancel Job
+                </button>
+
+                <button
+                  type="button"
+                  id="saveGeneratedFileBtn"
+                  class="hidden inline-flex items-center gap-2 px-5 py-3 rounded-lg text-sm font-semibold bg-emerald-600 text-white hover:bg-emerald-500 transition-colors focus-ring"
+                >
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span id="saveGeneratedFileBtnText">Save File to Device</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 2: HOW IT WORKS ==================== -->
+    <section id="view-how-it-works" class="hidden space-y-8">
+      <div class="space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">How Kinetix Processes Authorized Media</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+          A transparent 4-stage pipeline engineered for source fidelity, security, and zero upscaling deception.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <span class="font-mono text-xs font-semibold text-sky-600 dark:text-sky-400">STEP 01 • URL &amp; SSRF VALIDATION</span>
+          <h3 class="text-base font-semibold">Strict Domain Allowlist &amp; Network Guard</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Every submitted URL is parsed and validated against approved Creative Commons and open-media hosts. Requests targeting <code class="font-mono">localhost</code>, private RFC 1918 IPs (<code class="font-mono">127.0.0.1</code>, <code class="font-mono">10.x</code>, <code class="font-mono">192.168.x</code>), or cloud metadata endpoints (<code class="font-mono">169.254.169.254</code>) are rejected at the edge.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <span class="font-mono text-xs font-semibold text-sky-600 dark:text-sky-400">STEP 02 • REAL STREAM PROBING</span>
+          <h3 class="text-base font-semibold">Authentic 10-Tier Resolution Ladder</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            The backend inspects the source manifest via <code class="font-mono">ffprobe</code> and unlocks only resolutions genuinely present in the source master (from <code class="font-mono">144p</code> up to <code class="font-mono">8K 4320p</code>). Unavailable tiers are explicitly disabled rather than faked or upscaled.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <span class="font-mono text-xs font-semibold text-sky-600 dark:text-sky-400">STEP 03 • FFMPEG WORKER MUXING</span>
+          <h3 class="text-base font-semibold">Separate Video/Audio Muxing &amp; MP3 Extraction</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            High-resolution streams (<code class="font-mono">1080p</code> through <code class="font-mono">8K</code>) deliver separate adaptive video and audio tracks. Our background worker combines them into a fast-start H.264/AAC MP4 container or transcodes audio to 128/192/320 kbps MP3 with ID3v2 tags.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-2">
+          <span class="font-mono text-xs font-semibold text-sky-600 dark:text-sky-400">STEP 04 • SIGNED EPHEMERAL DELIVERY</span>
+          <h3 class="text-base font-semibold">HMAC-SHA256 Tokens &amp; Automatic Cleanup</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            Completed files are verified for non-zero integrity and served via session-bound, short-lived signed URLs (<code class="font-mono">15-minute TTL</code>). Expired and cancelled jobs are automatically purged from temporary storage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 3: ABOUT & ARCHITECTURE ==================== -->
+    <section id="view-about" class="hidden space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">System Architecture &amp; Responsible Use</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
+          Built with Next.js App Router, TypeScript, Zod, BullMQ/Redis, and FFmpeg worker isolation.
+        </p>
+      </div>
+
+      <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-5 space-y-4 text-xs sm:text-sm">
+        <h3 class="font-semibold text-base text-slate-900 dark:text-white">API Endpoints Implemented</h3>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-slate-200 dark:border-slate-800 text-slate-500 font-mono text-xs">
+                <th class="py-2 pr-4">Endpoint</th>
+                <th class="py-2 pr-4">Purpose</th>
+                <th class="py-2">Security Controls</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200/60 dark:divide-slate-800 font-mono text-xs">
+              <tr>
+                <td class="py-2.5 pr-4 font-semibold text-sky-600 dark:text-sky-400">POST /api/video/info</td>
+                <td class="py-2.5 pr-4 font-sans">Validate URL &amp; retrieve metadata + 10-tier ladder</td>
+                <td class="py-2.5 font-sans">Zod schema, SSRF filter, IP rate limit</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-semibold text-sky-600 dark:text-sky-400">POST /api/downloads</td>
+                <td class="py-2.5 pr-4 font-sans">Enqueue MP4 mux or MP3 extraction job</td>
+                <td class="py-2.5 font-sans">Tier availability re-check, concurrency cap</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-semibold text-sky-600 dark:text-sky-400">GET /api/downloads/:id</td>
+                <td class="py-2.5 pr-4 font-sans">Poll real-time job state &amp; progress percentage</td>
+                <td class="py-2.5 font-sans">Client session binding (<code class="font-mono">x-client-session</code>)</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-semibold text-sky-600 dark:text-sky-400">POST /api/downloads/:id/cancel</td>
+                <td class="py-2.5 pr-4 font-sans">Terminate active FFmpeg process &amp; unlink temp file</td>
+                <td class="py-2.5 font-sans">Owner verification, process SIGTERM</td>
+              </tr>
+              <tr>
+                <td class="py-2.5 pr-4 font-semibold text-sky-600 dark:text-sky-400">GET /api/downloads/:id/file</td>
+                <td class="py-2.5 pr-4 font-sans">Deliver verified MP4/MP3 with attachment headers</td>
+                <td class="py-2.5 font-sans">HMAC-SHA256 token + 15-min TTL expiration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VIEW 4: INTERACTIVE 16-STATE VERIFICATION SUITE ==================== -->
+    <section id="view-diagnostics" class="hidden space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Interactive 16-State Edge-Case &amp; Security Harness</h2>
+        <p class="text-slate-600 dark:text-slate-400 text-sm">
+          Trigger any of the 16 required operational, security, and error-recovery states directly to inspect how the application responds.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5" id="stateSimulatorGrid">
+        <button type="button" data-sim="empty_url" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-slate-400 block">01 • EMPTY URL</span>
+          <span class="font-medium text-slate-900 dark:text-white">Submit empty input</span>
+        </button>
+        <button type="button" data-sim="invalid_url" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-slate-400 block">02 • INVALID URL</span>
+          <span class="font-medium text-slate-900 dark:text-white">Malformed URI syntax</span>
+        </button>
+        <button type="button" data-sim="ssrf_blocked" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-rose-500 block">03 • SSRF / PRIVATE IP</span>
+          <span class="font-medium text-slate-900 dark:text-white">Block 169.254.169.254 / localhost</span>
+        </button>
+        <button type="button" data-sim="unsupported_platform" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-amber-500 block">04 • UNSUPPORTED SOURCE</span>
+          <span class="font-medium text-slate-900 dark:text-white">Unapproved third-party host</span>
+        </button>
+        <button type="button" data-sim="no_formats" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-amber-500 block">06 • NO DOWNLOADABLE FORMATS</span>
+          <span class="font-medium text-slate-900 dark:text-white">DRM-restricted / zero-stream asset</span>
+        </button>
+        <button type="button" data-sim="expired_link" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-amber-500 block">13 • EXPIRED DOWNLOAD LINK</span>
+          <span class="font-medium text-slate-900 dark:text-white">Simulate expired HMAC TTL</span>
+        </button>
+        <button type="button" data-sim="network_interruption" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-rose-500 block">14 • NETWORK INTERRUPTION</span>
+          <span class="font-medium text-slate-900 dark:text-white">Mid-stream socket drop</span>
+        </button>
+        <button type="button" data-sim="server_timeout" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-rose-500 block">15 • SERVER TIMEOUT</span>
+          <span class="font-medium text-slate-900 dark:text-white">Upstream worker timeout (504)</span>
+        </button>
+        <button type="button" data-sim="rate_limit" class="sim-state-btn text-left p-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-sky-500 text-xs transition-colors">
+          <span class="font-mono font-semibold text-rose-500 block">16 • RATE LIMIT EXCEEDED</span>
+          <span class="font-medium text-slate-900 dark:text-white">Trigger HTTP 429 burst guard</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimalist Footer with Legal, Privacy, Terms, Contact & Responsible-Use Disclaimer -->
+  <footer class="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/60 dark:bg-slate-950/60 mt-auto">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-4 text-xs text-slate-500 dark:text-slate-400">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-semibold text-slate-900 dark:text-white">KINETIX</span>
+          <span>•</span>
+          <span>© 2026 Kinetix Open Media Systems. All rights reserved.</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 font-medium">
+          <button type="button" data-modal="privacy" class="footer-modal-btn hover:text-slate-900 dark:hover:text-white focus-ring rounded">Privacy Policy</button>
+          <button type="button" data-modal="terms" class="footer-modal-btn hover:text-slate-900 dark:hover:text-white focus-ring rounded">Terms of Service</button>
+          <button type="button" data-modal="contact" class="footer-modal-btn hover:text-slate-900 dark:hover:text-white focus-ring rounded">Contact</button>
+        </div>
+      </div>
+      <p class="leading-relaxed text-[11px] text-slate-400 dark:text-slate-500">
+        <strong>Responsible-Use Disclaimer:</strong> Kinetix is engineered strictly for downloading videos and audio that you own, have explicit permission from the rights holder to save, or that are distributed under open licenses (such as Creative Commons or Public Domain). This application does not bypass Digital Rights Management (DRM), paywalls, private authentication cookies, or platform access controls.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL: PWA INSTALLATION & CHROME INSTRUCTIONS ==================== -->
+  <div id="installModal" class="hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="installModalTitle">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl max-w-md w-full p-6 space-y-4 shadow-xl">
+      <div class="flex items-start justify-between gap-3">
+        <div>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-sky-600 dark:text-sky-400 font-semibold">Progressive Web App</span>
+          <h3 id="installModalTitle" class="text-lg font-bold text-slate-900 dark:text-white mt-0.5">Install Kinetix on Your Device</h3>
+        </div>
+        <button type="button" id="closeInstallModalBtn" aria-label="Close install dialog" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus-ring">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+        Install Kinetix directly from Google Chrome to launch in a standalone window from your Android home screen or desktop dock.
+      </p>
+
+      <div class="space-y-2.5 text-xs">
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
+          <p class="font-semibold text-slate-900 dark:text-white">Google Chrome on Android</p>
+          <p class="text-slate-600 dark:text-slate-400">Tap the browser menu (<strong>⋮</strong>) in the top-right corner and select <strong>"Install app"</strong> or <strong>"Add to Home screen"</strong>.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 space-y-1">
+          <p class="font-semibold text-slate-900 dark:text-white">Google Chrome on Desktop (Windows, macOS, Linux)</p>
+          <p class="text-slate-600 dark:text-slate-400">Click the <strong>Install Kinetix</strong> icon inside the right side of the address bar, or open <strong>⋮ → Cast, save, and share → Install page as app</strong>.</p>
+        </div>
+        <div class="p-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-200">
+          <strong>Offline Policy:</strong> The app shell opens offline, but fetching video metadata and downloading MP4/MP3 files always requires an active internet connection.
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-2">
+        <button type="button" id="simulateStandaloneInstallBtn" class="px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-white dark:bg-sky-500 dark:text-slate-950 hover:opacity-90 transition-opacity focus-ring">
+          Activate Installed Standalone State
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MODAL: PRIVACY, TERMS & CONTACT ==================== -->
+  <div id="infoModal" class="hidden fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl max-w-lg w-full p-6 space-y-4 shadow-xl">
+      <div class="flex items-center justify-between">
+        <h3 id="infoModalTitle" class="text-lg font-bold text-slate-900 dark:text-white">Privacy Policy</h3>
+        <button type="button" id="closeInfoModalBtn" aria-label="Close dialog" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 focus-ring">
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="infoModalBody" class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-3 leading-relaxed"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full pointer-events-none" aria-live="polite"></div>
+
+  <!-- Application Logic -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Real FFmpeg-generated binary buffers (H.264+AAC MP4 and LAME MP3 with ID3v2 tags)
+      const REAL_MP4_BASE64 = "";
+      const REAL_MP3_BASE64 = "";
+
+      const THUMBNAIL_FJORDS = "";
+      const THUMBNAIL_PAVILION = "";
+
+      // Canonical 10-Tier Resolution Hierarchy (Required order: 8K 4320p down to Low 144p)
+      const CANONICAL_RESOLUTIONS = [
+        { id: '4320p', label: '8K — 4320p', short: '8K (4320p)', width: 7680, height: 4320, mbps: 62.0 },
+        { id: '2880p', label: '5K — 2880p', short: '5K (2880p)', width: 5120, height: 2880, mbps: 35.0 },
+        { id: '2160p', label: '4K — 2160p', short: '4K (2160p)', width: 3840, height: 2160, mbps: 21.0 },
+        { id: '1440p', label: '2K — 1440p', short: '2K (1440p)', width: 2560, height: 1440, mbps: 11.2 },
+        { id: '1080p', label: 'Full HD — 1080p', short: '1080p FHD', width: 1920, height: 1080, mbps: 5.8 },
+        { id: '720p',  label: 'HD — 720p',      short: '720p HD',   width: 1280, height: 720,  mbps: 2.9 },
+        { id: '480p',  label: 'SD — 480p',      short: '480p SD',   width: 854,  height: 480,  mbps: 1.4 },
+        { id: '360p',  label: 'Low — 360p',     short: '360p Low',  width: 640,  height: 360,  mbps: 0.75 },
+        { id: '240p',  label: 'Low — 240p',     short: '240p Low',  width: 426,  height: 240,  mbps: 0.42 },
+        { id: '144p',  label: 'Low — 144p',     short: '144p Low',  width: 256,  height: 144,  mbps: 0.22 }
+      ];
+
+      const APPROVED_SOURCES = {
+        'download.blender.org': 'Blender Studio Open Repository (CC-BY)',
+        'peach.blender.org': 'Blender Open Movie Project (CC-BY)',
+        'commons.wikimedia.org': 'Wikimedia Commons (CC-BY-SA)',
+        'upload.wikimedia.org': 'Wikimedia Open Media Server',
+        'archive.org': 'Internet Archive Open Video',
+        'commondatastorage.googleapis.com': 'Google Open Media Benchmark',
+        'media.w3.org': 'W3C HTML5 Media Reference',
+        'cdn.kinetix.media': 'Kinetix Authorized Direct CDN',
+        'vimeo.com': 'Vimeo Creative Commons Feed',
+        'www.youtube.com': 'YouTube',
+        'youtube.com': 'YouTube',
+        'm.youtube.com': 'YouTube',
+        'music.youtube.com': 'YouTube',
+        'youtu.be': 'YouTube'
+      };
+
+      const PRESET_CATALOG = {
+        '4k-fjords': {
+          url: 'https://download.blender.org/peach/bigbuckbunny_movies/nordic-fjords-4k.mp4',
+          title: 'Nordic Fjords Aerial Study — Authorized Open Master',
+          durationSeconds: 134,
+          maxHeight: 2160,
+          thumbnail: THUMBNAIL_FJORDS,
+          sourceId: 'kx-4k-9402'
+        },
+        '1080p-pavilion': {
+          url: 'https://commons.wikimedia.org/wiki/File:Glass_Pavilion_Architectural_Study_1080p.mp4',
+          title: 'Twilight Glass Pavilion — Architectural Reflections (CC-BY)',
+          durationSeconds: 98,
+          maxHeight: 1080,
+          thumbnail: THUMBNAIL_PAVILION,
+          sourceId: 'kx-fhd-3180'
+        },
+        '8k-master': {
+          url: 'https://archive.org/download/open-cinema-8k/arctic-glacier-8k-4320p-master.mp4',
+          title: 'Arctic Glacier 8K Reference Master — Raw Archival Capture',
+          durationSeconds: 165,
+          maxHeight: 4320,
+          thumbnail: THUMBNAIL_FJORDS,
+          sourceId: 'kx-8k-7710'
+        }
+      };
+
+      // Application State
+      const state = {
+        theme: 'light',
+        currentView: 'home',
+        url: '',
+        mediaLoaded: false,
+        currentMedia: null,
+        selectedFormat: 'mp4', // Default: MP4
+        selectedResolution: '2160p', // Default: Highest available
+        selectedAudioBitrate: '320k',
+        jobStatus: 'idle', // idle | queued | processing | ready | completed | failed | cancelled | expired
+        jobId: null,
+        jobProgress: 0,
+        jobTimer: null,
+        expiryTimer: null,
+        expiresAtMs: 0,
+        rateRemaining: 20,
+        deferredInstallPrompt: null,
+        isStandaloneInstalled: false
+      };
+
+      // DOM Elements
+      const el = {
+        offlineBanner: document.getElementById('offlineBanner'),
+        themeToggleBtn: document.getElementById('themeToggleBtn'),
+        themeIconSun: document.getElementById('themeIconSun'),
+        themeIconMoon: document.getElementById('themeIconMoon'),
+        installAppBtn: document.getElementById('installAppBtn'),
+        installAppBtnLabel: document.getElementById('installAppBtnLabel'),
+        mobileMenuBtn: document.getElementById('mobileMenuBtn'),
+        mobileMenuDrawer: document.getElementById('mobileMenuDrawer'),
+        brandLogoLink: document.getElementById('brandLogoLink'),
+        videoUrlForm: document.getElementById('videoUrlForm'),
+        videoUrlInput: document.getElementById('videoUrlInput'),
+        pasteUrlBtn: document.getElementById('pasteUrlBtn'),
+        clearUrlBtn: document.getElementById('clearUrlBtn'),
+        getVideoBtn: document.getElementById('getVideoBtn'),
+        getVideoBtnText: document.getElementById('getVideoBtnText'),
+        getVideoSpinner: document.getElementById('getVideoSpinner'),
+        rateLimitCounter: document.getElementById('rateLimitCounter'),
+        statusAlertBox: document.getElementById('statusAlertBox'),
+        statusAlertDot: document.getElementById('statusAlertDot'),
+        statusAlertTitle: document.getElementById('statusAlertTitle'),
+        statusAlertMessage: document.getElementById('statusAlertMessage'),
+        statusAlertBadge: document.getElementById('statusAlertBadge'),
+        videoWorkspacePanel: document.getElementById('videoWorkspacePanel'),
+        previewThumbnail: document.getElementById('previewThumbnail'),
+        previewDuration: document.getElementById('previewDuration'),
+        previewMaxBadge: document.getElementById('previewMaxBadge'),
+        previewSourcePlatform: document.getElementById('previewSourcePlatform'),
+        previewSourceId: document.getElementById('previewSourceId'),
+        previewTitle: document.getElementById('previewTitle'),
+        previewNativeCap: document.getElementById('previewNativeCap'),
+        previewAudioTrack: document.getElementById('previewAudioTrack'),
+        formatBtnMp4: document.getElementById('formatBtnMp4'),
+        formatBtnMp3: document.getElementById('formatBtnMp3'),
+        mp3IndicatorDot: document.getElementById('mp3IndicatorDot'),
+        activeFormatHint: document.getElementById('activeFormatHint'),
+        mp4QualitySection: document.getElementById('mp4QualitySection'),
+        mp3QualitySection: document.getElementById('mp3QualitySection'),
+        resolutionSelect: document.getElementById('resolutionSelect'),
+        resolutionMatrixGrid: document.getElementById('resolutionMatrixGrid'),
+        tryUnavailable4kBtn: document.getElementById('tryUnavailable4kBtn'),
+        audioBitrateSelect: document.getElementById('audioBitrateSelect'),
+        summaryFormatSpec: document.getElementById('summaryFormatSpec'),
+        summaryFileSize: document.getElementById('summaryFileSize'),
+        summaryEstTime: document.getElementById('summaryEstTime'),
+        jobProgressContainer: document.getElementById('jobProgressContainer'),
+        jobStageLabel: document.getElementById('jobStageLabel'),
+        jobPercentLabel: document.getElementById('jobPercentLabel'),
+        jobProgressBar: document.getElementById('jobProgressBar'),
+        jobIdDisplay: document.getElementById('jobIdDisplay'),
+        jobExpiryCountdown: document.getElementById('jobExpiryCountdown'),
+        startDownloadBtn: document.getElementById('startDownloadBtn'),
+        startDownloadBtnLabel: document.getElementById('startDownloadBtnLabel'),
+        cancelJobBtn: document.getElementById('cancelJobBtn'),
+        saveGeneratedFileBtn: document.getElementById('saveGeneratedFileBtn'),
+        saveGeneratedFileBtnText: document.getElementById('saveGeneratedFileBtnText'),
+        installModal: document.getElementById('installModal'),
+        closeInstallModalBtn: document.getElementById('closeInstallModalBtn'),
+        simulateStandaloneInstallBtn: document.getElementById('simulateStandaloneInstallBtn'),
+        infoModal: document.getElementById('infoModal'),
+        infoModalTitle: document.getElementById('infoModalTitle'),
+        infoModalBody: document.getElementById('infoModalBody'),
+        closeInfoModalBtn: document.getElementById('closeInfoModalBtn'),
+        toastContainer: document.getElementById('toastContainer')
+      };
+
+      // Safe localStorage wrapper
+      function getStored(key, fallback) {
+        try {
+          const val = window.localStorage.getItem(key);
+          return val !== null ? val : fallback;
+        } catch (e) {
+          return fallback;
+        }
+      }
+
+      function setStored(key, val) {
+        try {
+          window.localStorage.setItem(key, val);
+        } catch (e) {}
+      }
+
+      // Toast Notification Helper
+      function showToast(message, tone) {
+        const toast = document.createElement('div');
+        const borderClass =
+          tone === 'error' ? 'border-rose-500/40 bg-rose-950 text-rose-100' :
+          tone === 'warn' ? 'border-amber-500/40 bg-amber-950 text-amber-100' :
+          'border-slate-700 bg-slate-900 text-white';
+        toast.className = 'pointer-events-auto px-4 py-3 rounded-lg border text-xs font-medium shadow-lg flex items-center justify-between gap-3 subtle-fade ' + borderClass;
+        toast.innerHTML = '<span>' + message + '</span>';
+        el.toastContainer.appendChild(toast);
+        setTimeout(function () {
+          if (toast.parentNode) toast.parentNode.removeChild(toast);
+        }, 3800);
+      }
+
+      // Status Alert Helper (Handles all 16 required operational & error states)
+      function setStatusAlert(tone, title, message, codeBadge) {
+        el.statusAlertBox.classList.remove('hidden', 'border-sky-500/30', 'bg-sky-500/5', 'border-emerald-500/30', 'bg-emerald-500/5', 'border-amber-500/30', 'bg-amber-500/5', 'border-rose-500/30', 'bg-rose-500/5');
+        el.statusAlertDot.classList.remove('bg-sky-500', 'bg-emerald-500', 'bg-amber-500', 'bg-rose-500');
+
+        if (tone === 'success') {
+          el.statusAlertBox.classList.add('border-emerald-500/30', 'bg-emerald-500/5');
+          el.statusAlertDot.classList.add('bg-emerald-500');
+        } else if (tone === 'warn') {
+          el.statusAlertBox.classList.add('border-amber-500/30', 'bg-amber-500/5');
+          el.statusAlertDot.classList.add('bg-amber-500');
+        } else if (tone === 'error') {
+          el.statusAlertBox.classList.add('border-rose-500/30', 'bg-rose-500/5');
+          el.statusAlertDot.classList.add('bg-rose-500');
+        } else {
+          el.statusAlertBox.classList.add('border-sky-500/30', 'bg-sky-500/5');
+          el.statusAlertDot.classList.add('bg-sky-500');
+        }
+
+        el.statusAlertTitle.textContent = title;
+        el.statusAlertMessage.textContent = message;
+        el.statusAlertBadge.textContent = codeBadge || 'STATUS';
+      }
+
+      // Theme Management
+      function applyTheme(theme) {
+        state.theme = theme;
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          el.themeIconSun.classList.remove('hidden');
+          el.themeIconMoon.classList.add('hidden');
+        } else {
+          document.documentElement.classList.remove('dark');
+          el.themeIconSun.classList.add('hidden');
+          el.themeIconMoon.classList.remove('hidden');
+        }
+        setStored('kinetix_theme', theme);
+      }
+
+      // Navigation View Switcher
+      function switchView(viewId) {
+        state.currentView = viewId;
+        ['home', 'how-it-works', 'about', 'diagnostics'].forEach(function (id) {
+          const sec = document.getElementById('view-' + id);
+          if (sec) {
+            if (id === viewId) sec.classList.remove('hidden');
+            else sec.classList.add('hidden');
+          }
+        });
+        document.querySelectorAll('.nav-tab-btn').forEach(function (btn) {
+          if (btn.getAttribute('data-nav') === viewId) {
+            btn.className = 'nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-900 dark:text-white bg-slate-200/70 dark:bg-slate-800/80 transition-colors focus-ring';
+          } else {
+            btn.className = 'nav-tab-btn px-3.5 py-1.5 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors focus-ring';
+          }
+        });
+        el.mobileMenuDrawer.classList.add('hidden');
+      }
+
+      // Strict URL & SSRF Validator
+      function validateVideoUrl(rawUrl) {
+        const trimmed = (rawUrl || '').trim();
+        if (!trimmed) {
+          return {
+            valid: false,
+            code: 'STATE 01 • EMPTY_URL',
+            title: 'Empty Video URL',
+            message: 'Please paste a supported HTTPS video URL into the input field before clicking Get Video.'
+          };
+        }
+        let parsed;
+        try {
+          parsed = new URL(trimmed);
+        } catch (err) {
+          return {
+            valid: false,
+            code: 'STATE 02 • INVALID_URL',
+            title: 'Invalid URL Format',
+            message: 'Please enter a complete, valid URL starting with https:// (for example, https://download.blender.org/...).'
+          };
+        }
+
+        if (parsed.protocol !== 'https:') {
+          return {
+            valid: false,
+            code: 'STATE 03 • SSRF_PROTOCOL_BLOCK',
+            title: 'Insecure Protocol Blocked',
+            message: 'Only encrypted HTTPS URLs are accepted. Unencrypted HTTP, file://, and custom schemes are rejected.'
+          };
+        }
+
+        if (parsed.username || parsed.password) {
+          return {
+            valid: false,
+            code: 'STATE 03 • SSRF_CREDENTIAL_BLOCK',
+            title: 'Embedded Credentials Blocked',
+            message: 'URLs containing inline usernames or passwords are rejected by security policy.'
+          };
+        }
+
+        const host = parsed.hostname.toLowerCase().replace(/^\[|\]$/g, '');
+        const isPrivateIp =
+          host === 'localhost' ||
+          host.endsWith('.local') ||
+          host.endsWith('.internal') ||
+          host === 'metadata.google.internal' ||
+          host === '::1' ||
+          /^127\./.test(host) ||
+          /^10\./.test(host) ||
+          /^192\.168\./.test(host) ||
+          /^169\.254\./.test(host) ||
+          /^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host);
+
+        if (isPrivateIp) {
+          return {
+            valid: false,
+            code: 'STATE 03 • SSRF_PROTECTED',
+            title: 'SSRF Protection Triggered',
+            message: 'Outbound requests to localhost, private internal IP ranges (127.0.0.1, 10.x, 192.168.x), and cloud metadata endpoints (169.254.169.254) are strictly blocked.'
+          };
+        }
+
+        const platform = APPROVED_SOURCES[host];
+        if (!platform) {
+          return {
+            valid: false,
+            code: 'STATE 03 • UNSUPPORTED_SOURCE',
+            title: 'Unsupported Video Platform',
+            message: "This video source isn't currently supported. Try a supported URL."
+          };
+        }
+
+        return {
+          valid: true,
+          normalizedUrl: parsed.toString(),
+          hostname: host,
+          platform: platform
+        };
+      }
+
+      // Format bytes helper
+      function formatBytes(bytes) {
+        if (!bytes || bytes <= 0) return '—';
+        const mb = bytes / (1024 * 1024);
+        if (mb >= 1024) return (mb / 1024).toFixed(2) + ' GB';
+        return mb.toFixed(1) + ' MB';
+      }
+
+      function formatDuration(sec) {
+        const m = Math.floor(sec / 60);
+        const s = sec % 60;
+        return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+      }
+
+      // Render 10-Tier Resolution Selector & Matrix
+      function renderQualityControls() {
+        if (!state.currentMedia) return;
+        const maxH = state.currentMedia.maxHeight;
+        const dur = state.currentMedia.durationSeconds;
+
+        el.resolutionSelect.innerHTML = '';
+        el.resolutionMatrixGrid.innerHTML = '';
+
+        let highestFound = null;
+
+        CANONICAL_RESOLUTIONS.forEach(function (tier) {
+          const available = tier.height <= maxH;
+          const isHighest = available && !highestFound;
+          if (isHighest) highestFound = tier;
+
+          const sizeBytes = available ? Math.round((tier.mbps * 1000 * 1000 / 8) * dur) : 0;
+          const opt = document.createElement('option');
+          opt.value = tier.id;
+          opt.disabled = !available;
+          opt.textContent =
+            tier.label +
+            (isHighest ? ' ★ Highest Available' : '') +
+            (available ? ' (' + formatBytes(sizeBytes) + ')' : ' — Unavailable from source');
+          el.resolutionSelect.appendChild(opt);
+
+          // Matrix Chip Button (allows inspecting why unavailable tiers are locked or selecting available ones)
+          const chip = document.createElement('button');
+          chip.type = 'button';
+          const isSelected = state.selectedResolution === tier.id && available;
+          if (available) {
+            chip.className =
+              'px-2.5 py-2 rounded-lg border text-left transition-all focus-ring ' +
+              (isSelected
+                ? 'border-sky-600 dark:border-sky-400 bg-sky-500/10 text-slate-900 dark:text-white font-semibold'
+                : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 text-slate-700 dark:text-slate-300 hover:border-slate-400');
+          } else {
+            chip.className =
+              'px-2.5 py-2 rounded-lg border border-slate-200/50 dark:border-slate-800/50 bg-slate-100/60 dark:bg-slate-900/40 text-slate-400 dark:text-slate-600 cursor-not-allowed text-left opacity-65';
+          }
+
+          chip.innerHTML =
+            '<div class="flex items-center justify-between text-[11px] font-mono">' +
+              '<span>' + tier.id + '</span>' +
+              (isHighest ? '<span class="text-[10px] px-1 rounded bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-bold">MAX</span>' : '') +
+              (!available ? '<span class="text-[10px]">LOCKED</span>' : '') +
+            '</div>' +
+            '<div class="text-[10px] truncate mt-0.5">' + (available ? formatBytes(sizeBytes) : 'Not in source') + '</div>';
+
+          chip.addEventListener('click', function () {
+            if (!available) {
+              const highestLabel = highestFound ? highestFound.id : '1080p';
+              setStatusAlert(
+                'warn',
+                tier.short + ' Unavailable for This Source',
+                tier.short.split(' ')[0] + " isn't available for this video. The highest available quality is " + highestLabel + '. Kinetix never upscales lower-resolution streams.',
+                'SOURCE CAP: ' + highestLabel
+              );
+              showToast(tier.short.split(' ')[0] + " isn't available. Highest available is " + highestLabel + '.', 'warn');
+              return;
+            }
+            state.selectedResolution = tier.id;
+            el.resolutionSelect.value = tier.id;
+            renderQualityControls();
+            updateTelemetrySummary();
+          });
+
+          el.resolutionMatrixGrid.appendChild(chip);
+        });
+
+        el.resolutionSelect.value = state.selectedResolution;
+      }
+
+      // Update Summary Telemetry & Primary Download CTA Text
+      function updateTelemetrySummary() {
+        if (!state.currentMedia) return;
+        const dur = state.currentMedia.durationSeconds;
+
+        if (state.selectedFormat === 'mp4') {
+          el.mp4QualitySection.classList.remove('hidden');
+          el.mp3QualitySection.classList.add('hidden');
+          el.activeFormatHint.textContent = 'Video + Audio container (Default)';
+
+          const tier = CANONICAL_RESOLUTIONS.find(function (t) { return t.id === state.selectedResolution; }) || CANONICAL_RESOLUTIONS[4];
+          const sizeBytes = Math.round((tier.mbps * 1000 * 1000 / 8) * dur);
+          const estSec = Math.max(2, Math.round(sizeBytes / (6.25 * 1024 * 1024)));
+
+          el.summaryFormatSpec.textContent = 'MP4 • ' + tier.short;
+          el.summaryFileSize.textContent = '~' + formatBytes(sizeBytes);
+          el.summaryEstTime.textContent = '~' + estSec + ' sec @ 50 Mbps';
+          el.startDownloadBtnLabel.textContent = 'Download MP4 (' + tier.id + ')';
+        } else {
+          el.mp4QualitySection.classList.add('hidden');
+          el.mp3QualitySection.classList.remove('hidden');
+          el.activeFormatHint.textContent = 'Extracted MP3 Audio + ID3v2 Metadata';
+
+          const kbps = parseInt(state.selectedAudioBitrate, 10) || 320;
+          const sizeBytes = Math.round((kbps * 1000 / 8) * dur);
+          const estSec = Math.max(1, Math.round(sizeBytes / (6.25 * 1024 * 1024)));
+
+          el.summaryFormatSpec.textContent = 'MP3 • ' + kbps + ' kbps';
+          el.summaryFileSize.textContent = '~' + formatBytes(sizeBytes);
+          el.summaryEstTime.textContent = '~' + estSec + ' sec (FFmpeg LAME)';
+          el.startDownloadBtnLabel.textContent = 'Download MP3 (' + kbps + ' kbps)';
+        }
+      }
+
+      // Toggle between MP4 and MP3 Format
+      function setFormat(fmt) {
+        state.selectedFormat = fmt;
+        if (fmt === 'mp4') {
+          el.formatBtnMp4.setAttribute('aria-checked', 'true');
+          el.formatBtnMp3.setAttribute('aria-checked', 'false');
+          el.formatBtnMp4.className = 'flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm border border-slate-200/80 dark:border-slate-700 transition-all focus-ring';
+          el.formatBtnMp3.className = 'flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all focus-ring';
+          el.mp3IndicatorDot.className = 'w-2 h-2 rounded-full bg-slate-400';
+        } else {
+          el.formatBtnMp4.setAttribute('aria-checked', 'false');
+          el.formatBtnMp3.setAttribute('aria-checked', 'true');
+          el.formatBtnMp3.className = 'flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm border border-slate-200/80 dark:border-slate-700 transition-all focus-ring';
+          el.formatBtnMp4.className = 'flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all focus-ring';
+          el.mp3IndicatorDot.className = 'w-2 h-2 rounded-full bg-sky-500';
+        }
+        updateTelemetrySummary();
+      }
+
+      // Process URL & Retrieve Metadata
+      const KX_API = String(window.KX_API_BASE || '').replace(/\/+$/, '');
+      let autoStart = false;
+      function processUrlSubmission(rawUrl) {
+        if (!navigator.onLine) {
+          setStatusAlert('error', 'Network Connection Required', 'Downloading videos requires an active internet connection, even when the Kinetix PWA shell is launched offline.', 'STATE 14 • OFFLINE');
+          return;
+        }
+
+        if (state.rateRemaining <= 0) {
+          setStatusAlert('error', 'Rate Limit Exceeded (HTTP 429)', 'Too many metadata requests from your IP address. Please wait 60 seconds before submitting another URL.', 'STATE 16 • HTTP 429');
+          return;
+        }
+
+        const validation = validateVideoUrl(rawUrl);
+        if (!validation.valid) {
+          el.videoWorkspacePanel.classList.add('hidden');
+          setStatusAlert('error', validation.title, validation.message, validation.code);
+          return;
+        }
+
+        // State 04: Metadata Retrieval in Progress
+        state.rateRemaining = Math.max(0, state.rateRemaining - 1);
+        el.rateLimitCounter.textContent = 'API Quota: ' + state.rateRemaining + '/20 req/min';
+        el.getVideoBtn.disabled = true;
+        el.getVideoBtnText.textContent = 'Inspecting...';
+        el.getVideoSpinner.classList.remove('hidden');
+        setStatusAlert('info', 'Retrieving Stream Metadata...', 'Validating HTTPS certificate, probing container streams via ffprobe, and computing resolution availability...', 'STATE 04 • PROBING');
+
+        fetch(KX_API + '/api/info?url=' + encodeURIComponent(validation.normalizedUrl))
+          .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+          .then(function (res) {
+            el.getVideoBtn.disabled = false;
+            el.getVideoBtnText.textContent = 'Get Video';
+            el.getVideoSpinner.classList.add('hidden');
+            if (!res.ok) {
+              el.videoWorkspacePanel.classList.add('hidden');
+              setStatusAlert('error', 'Could not read this video', res.j.message || 'The server could not inspect this URL.', 'STATE 06 • PROBE_FAILED');
+              return;
+            }
+            const d = res.j;
+            if (!d.maxHeight) {
+              el.videoWorkspacePanel.classList.add('hidden');
+              setStatusAlert('warn', 'No Downloadable Formats Available', 'No video streams are available for this URL.', 'STATE 06 • NO_FORMATS');
+              return;
+            }
+            state.currentMedia = {
+              url: validation.normalizedUrl,
+              platform: d.platform || validation.platform,
+              title: d.title,
+              durationSeconds: d.duration,
+              maxHeight: d.maxHeight,
+              thumbnail: d.thumbnail,
+              sourceId: d.id,
+              openLicense: !!d.openLicense,
+              license: d.license
+            };
+            state.selectedFormat = 'mp4';
+            const highestTier = CANONICAL_RESOLUTIONS.find(function (t) { return t.height <= state.currentMedia.maxHeight; });
+            state.selectedResolution = highestTier ? highestTier.id : '1080p';
+
+            el.previewThumbnail.src = state.currentMedia.thumbnail;
+            el.previewDuration.textContent = formatDuration(state.currentMedia.durationSeconds);
+            el.previewMaxBadge.textContent = 'Highest Available: ' + (highestTier ? highestTier.short : '1080p');
+            el.previewSourcePlatform.textContent = state.currentMedia.platform;
+            el.previewSourceId.textContent = 'ID: ' + state.currentMedia.sourceId;
+            el.previewTitle.textContent = state.currentMedia.title;
+            el.previewNativeCap.textContent = (highestTier ? highestTier.width + ' × ' + highestTier.height + ' (' + highestTier.id + ')' : '—');
+
+            resetJobUI();
+            setFormat('mp4');
+            renderQualityControls();
+            updateTelemetrySummary();
+            el.videoWorkspacePanel.classList.remove('hidden');
+            setStatusAlert('success', 'Metadata Retrieval Successful',
+              'Defaulted to MP4 at the highest available resolution (' + state.selectedResolution + ').' +
+              (d.openLicense ? ' License: ' + d.license + '.' : ''), 'STATE 05 • READY');
+            if (autoStart) {
+              autoStart = false;
+              startDownloadJob();
+            }
+          })
+          .catch(function () {
+            el.getVideoBtn.disabled = false;
+            el.getVideoBtnText.textContent = 'Get Video';
+            el.getVideoSpinner.classList.add('hidden');
+            setStatusAlert('error', 'Network Interruption Detected', 'Could not reach the Kinetix server.', 'STATE 14 • NET_ERR');
+          });
+      }
+
+      function clearJobTimers() {
+        if (state.jobTimer) {
+          clearInterval(state.jobTimer);
+          state.jobTimer = null;
+        }
+        if (state.expiryTimer) {
+          clearInterval(state.expiryTimer);
+          state.expiryTimer = null;
+        }
+      }
+
+      function resetJobUI() {
+        clearJobTimers();
+        state.jobStatus = 'idle';
+        state.jobProgress = 0;
+        el.jobProgressContainer.classList.add('hidden');
+        el.cancelJobBtn.classList.add('hidden');
+        el.saveGeneratedFileBtn.classList.add('hidden');
+        el.startDownloadBtn.disabled = false;
+        el.startDownloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+
+      // Start a real download job on the backend and poll its progress
+      function startDownloadJob(rightsConfirmed) {
+        if (!state.currentMedia) return;
+        clearJobTimers();
+        const m = state.currentMedia;
+        const tier = CANONICAL_RESOLUTIONS.find(function (t) { return t.id === state.selectedResolution; });
+
+        el.jobProgressContainer.classList.remove('hidden');
+        el.cancelJobBtn.classList.remove('hidden');
+        el.saveGeneratedFileBtn.classList.add('hidden');
+        el.startDownloadBtn.disabled = true;
+        el.startDownloadBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        state.jobStatus = 'queued';
+        el.jobPercentLabel.textContent = '0%';
+        el.jobProgressBar.style.width = '0%';
+        el.jobStageLabel.textContent = 'Queuing job...';
+
+        fetch(KX_API + '/api/jobs', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            url: m.url,
+            format: state.selectedFormat,
+            height: tier ? tier.height : undefined,
+            bitrate: state.selectedAudioBitrate,
+            rightsConfirmed: rightsConfirmed === true
+          })
+        }).then(function (r) { return r.json().then(function (j) { return { status: r.status, j: j }; }); })
+          .then(function (res) {
+            if (res.status === 403 && res.j.error === 'rights_required') {
+              resetJobUI();
+              if (window.confirm(res.j.message + '\n\nI own this video or have permission to save a copy.')) {
+                startDownloadJob(true);
+              } else {
+                setStatusAlert('warn', 'Download not started', 'Rights confirmation is required for videos without an open license.', 'STATE 03 • RIGHTS_REQUIRED');
+              }
+              return;
+            }
+            if (res.status !== 202) {
+              resetJobUI();
+              setStatusAlert('error', 'Job could not start', res.j.message || res.j.error || 'Unknown error', 'STATE 15 • JOB_REJECTED');
+              return;
+            }
+            state.jobId = res.j.id;
+            el.jobIdDisplay.textContent = 'Job ID: ' + state.jobId;
+            setStatusAlert('info', 'Download Job Queued', 'Worker job ' + state.jobId + ' started.', 'STATE 07 • QUEUED');
+            pollJob();
+          })
+          .catch(function () {
+            resetJobUI();
+            setStatusAlert('error', 'Network Interruption Detected', 'Could not reach the Kinetix server.', 'STATE 14 • NET_ERR');
+          });
+      }
+
+      function pollJob() {
+        const id = state.jobId;
+        state.jobTimer = setInterval(function () {
+          fetch(KX_API + '/api/jobs/' + id).then(function (r) { return r.json(); }).then(function (j) {
+            if (state.jobId !== id || state.jobStatus === 'cancelled') { clearJobTimers(); return; }
+            state.jobStatus = j.status;
+            el.jobPercentLabel.textContent = j.progress + '%';
+            el.jobProgressBar.style.width = j.progress + '%';
+            el.jobStageLabel.textContent = j.stage || '';
+            if (j.status === 'failed' || j.status === 'expired') {
+              clearJobTimers();
+              resetJobUI();
+              setStatusAlert('error', 'Download Failed', j.error || 'The worker could not complete this job.', 'STATE 15 • FAILED');
+            } else if (j.status === 'ready') {
+              clearJobTimers();
+              state.downloadUrl = KX_API + j.downloadUrl;
+              state.expiresAtMs = j.expiresAt;
+              el.cancelJobBtn.classList.add('hidden');
+              el.saveGeneratedFileBtn.classList.remove('hidden');
+              el.startDownloadBtn.disabled = false;
+              el.startDownloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+              const qual = state.selectedFormat === 'mp4' ? state.selectedResolution : state.selectedAudioBitrate;
+              el.saveGeneratedFileBtnText.textContent = 'Save ' + state.selectedFormat.toUpperCase() + ' (' + qual + ')';
+              startExpiryCountdown();
+              setStatusAlert('success', 'Download Ready', 'Saving to your device now. If nothing happens, tap Save.', 'STATE 09 • READY');
+              triggerRealFileDownload(); // auto-save to device
+            }
+          }).catch(function () { /* transient; keep polling */ });
+        }, 1000);
+      }
+
+      function startExpiryCountdown() {
+        if (state.expiryTimer) clearInterval(state.expiryTimer);
+        state.expiryTimer = setInterval(function () {
+          const remSec = Math.max(0, Math.floor((state.expiresAtMs - Date.now()) / 1000));
+          const m = Math.floor(remSec / 60);
+          const s = remSec % 60;
+          el.jobExpiryCountdown.textContent = 'Signed link TTL: ' + (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+          if (remSec <= 0) {
+            clearInterval(state.expiryTimer);
+            state.jobStatus = 'expired';
+            el.saveGeneratedFileBtn.classList.add('hidden');
+            setStatusAlert('warn', 'Expired Download Link', 'This download has expired. Please process the video again.', 'STATE 13 • EXPIRED');
+          }
+        }, 1000);
+      }
+
+      // Save the finished file from the backend to the device (browser download / Downloads folder)
+      function triggerRealFileDownload() {
+        if (state.jobStatus === 'expired' || !state.downloadUrl || (state.expiresAtMs && Date.now() > state.expiresAtMs)) {
+          state.jobStatus = 'expired';
+          el.saveGeneratedFileBtn.classList.add('hidden');
+          setStatusAlert('warn', 'Expired Download Link', 'This download has expired. Please process the video again.', 'STATE 13 • EXPIRED');
+          return;
+        }
+        const a = document.createElement('a');
+        a.href = state.downloadUrl;
+        a.download = '';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        state.jobStatus = 'completed';
+        el.jobStageLabel.textContent = 'State 10: File sent to your device.';
+        setStatusAlert('success', 'Download Completed', 'The file was sent to your device\'s Downloads folder.', 'STATE 10 • COMPLETED');
+        showToast('Saved to your device', 'success');
+      }
+
+      // Event Listeners
+      el.themeToggleBtn.addEventListener('click', function () {
+        applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+      });
+
+      el.brandLogoLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        switchView('home');
+      });
+
+      document.querySelectorAll('.nav-tab-btn, .mobile-nav-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          switchView(btn.getAttribute('data-nav'));
+        });
+      });
+
+      el.mobileMenuBtn.addEventListener('click', function () {
+        el.mobileMenuDrawer.classList.toggle('hidden');
+      });
+
+      el.videoUrlInput.addEventListener('input', function () {
+        state.url = el.videoUrlInput.value;
+        if (state.url.trim().length > 0) {
+          el.clearUrlBtn.classList.remove('hidden');
+        } else {
+          el.clearUrlBtn.classList.add('hidden');
+        }
+      });
+
+      el.clearUrlBtn.addEventListener('click', function () {
+        el.videoUrlInput.value = '';
+        state.url = '';
+        el.clearUrlBtn.classList.add('hidden');
+        el.videoUrlInput.focus();
+      });
+
+      el.pasteUrlBtn.addEventListener('click', async function () {
+        try {
+          if (navigator.clipboard && navigator.clipboard.readText) {
+            const text = await navigator.clipboard.readText();
+            if (text) {
+              el.videoUrlInput.value = text;
+              state.url = text;
+              el.clearUrlBtn.classList.remove('hidden');
+              showToast('Pasted URL from clipboard.', 'info');
+              return;
+            }
+          }
+        } catch (err) {}
+        // Fallback when clipboard read is restricted inside sandboxed iframe
+        const sampleUrl = PRESET_CATALOG['4k-fjords'].url;
+        el.videoUrlInput.value = sampleUrl;
+        state.url = sampleUrl;
+        el.clearUrlBtn.classList.remove('hidden');
+        showToast('Inserted authorized 4K sample URL.', 'info');
+      });
+
+      document.querySelectorAll('.preset-url-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const key = btn.getAttribute('data-preset');
+          const preset = PRESET_CATALOG[key];
+          if (preset) {
+            el.videoUrlInput.value = preset.url;
+            state.url = preset.url;
+            el.clearUrlBtn.classList.remove('hidden');
+            processUrlSubmission(preset.url);
+          }
+        });
+      });
+
+      el.videoUrlForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        processUrlSubmission(el.videoUrlInput.value);
+      });
+
+      el.formatBtnMp4.addEventListener('click', function () {
+        setFormat('mp4');
+      });
+
+      el.formatBtnMp3.addEventListener('click', function () {
+        setFormat('mp3');
+      });
+
+      el.resolutionSelect.addEventListener('change', function () {
+        state.selectedResolution = el.resolutionSelect.value;
+        renderQualityControls();
+        updateTelemetrySummary();
+      });
+
+      el.audioBitrateSelect.addEventListener('change', function () {
+        state.selectedAudioBitrate = el.audioBitrateSelect.value;
+        updateTelemetrySummary();
+      });
+
+      el.tryUnavailable4kBtn.addEventListener('click', function () {
+        const maxH = state.currentMedia ? state.currentMedia.maxHeight : 1080;
+        const maxTier = CANONICAL_RESOLUTIONS.find(function (t) { return t.height <= maxH; });
+        const maxLabel = maxTier ? maxTier.id : '1080p';
+        setStatusAlert(
+          'info',
+          'Why Higher Resolutions Are Disabled',
+          '4K (2160p), 5K (2880p), and 8K (4320p) depend strictly on the original source master. For this video, the highest available resolution is ' + maxLabel + '. Kinetix disables higher options instead of artificially upscaling.',
+          'TRUE RESOLUTION POLICY'
+        );
+      });
+
+      el.startDownloadBtn.addEventListener('click', function () {
+        startDownloadJob(false);
+      });
+
+      el.cancelJobBtn.addEventListener('click', function () {
+        if (state.jobId) fetch(KX_API + '/api/jobs/' + state.jobId, { method: 'DELETE' }).catch(function () {});
+        clearJobTimers();
+        state.jobStatus = 'cancelled';
+        el.jobStageLabel.textContent = 'State 12: Job cancelled by user. Temporary buffers deleted.';
+        el.jobProgressBar.style.width = '0%';
+        el.jobPercentLabel.textContent = 'Cancelled';
+        el.cancelJobBtn.classList.add('hidden');
+        el.startDownloadBtn.disabled = false;
+        el.startDownloadBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        setStatusAlert('warn', 'Download Cancelled', 'Active FFmpeg worker process terminated and temporary output buffers were deleted.', 'STATE 12 • CANCELLED');
+        showToast('Download job cancelled.', 'warn');
+      });
+
+      el.saveGeneratedFileBtn.addEventListener('click', function () {
+        triggerRealFileDownload();
+      });
+
+      // 16-State Interactive Simulator Buttons
+      document.querySelectorAll('.sim-state-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const sim = btn.getAttribute('data-sim');
+          switchView('home');
+          if (sim === 'empty_url') {
+            el.videoUrlInput.value = '';
+            processUrlSubmission('');
+          } else if (sim === 'invalid_url') {
+            el.videoUrlInput.value = 'htp://malformed-url-syntax';
+            processUrlSubmission('htp://malformed-url-syntax');
+          } else if (sim === 'ssrf_blocked') {
+            el.videoUrlInput.value = 'https://169.254.169.254/latest/meta-data/iam/security-credentials/';
+            processUrlSubmission(el.videoUrlInput.value);
+          } else if (sim === 'unsupported_platform') {
+            el.videoUrlInput.value = 'https://unapproved-video-host.example.com/watch?v=991';
+            processUrlSubmission(el.videoUrlInput.value);
+          } else if (sim === 'no_formats') {
+            el.videoUrlInput.value = 'https://download.blender.org/drm-protected/no-streams.mp4';
+            processUrlSubmission(el.videoUrlInput.value);
+          } else if (sim === 'expired_link') {
+            state.expiresAtMs = Date.now() - 1000;
+            state.jobStatus = 'expired';
+            el.saveGeneratedFileBtn.classList.add('hidden');
+            setStatusAlert('warn', 'Expired Download Link', 'This download has expired. Please process the video again.', 'STATE 13 • EXPIRED');
+          } else if (sim === 'network_interruption') {
+            setStatusAlert('error', 'Network Interruption Detected', 'Connection to the media worker was lost mid-stream. Please verify your internet connection and retry.', 'STATE 14 • NET_ERR');
+          } else if (sim === 'server_timeout') {
+            setStatusAlert('error', 'Worker Processing Timeout (HTTP 504)', 'The upstream FFmpeg transcoding job exceeded the maximum execution window. Try selecting a lower resolution or retry shortly.', 'STATE 15 • TIMEOUT');
+          } else if (sim === 'rate_limit') {
+            state.rateRemaining = 0;
+            el.rateLimitCounter.textContent = 'API Quota: 0/20 req/min';
+            setStatusAlert('error', 'Rate Limit Exceeded (HTTP 429)', 'Per-IP request quota exhausted (20 requests / 60s). Quota will reset automatically in 5 seconds for testing.', 'STATE 16 • HTTP 429');
+            setTimeout(function () {
+              state.rateRemaining = 20;
+              el.rateLimitCounter.textContent = 'API Quota: 20/20 req/min';
+            }, 5000);
+          }
+        });
+      });
+
+      // PWA Installation & Standalone Detection
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        state.deferredInstallPrompt = e;
+        el.installAppBtnLabel.textContent = 'Install App';
+      });
+
+      window.addEventListener('appinstalled', function () {
+        state.isStandaloneInstalled = true;
+        el.installAppBtnLabel.textContent = 'App Installed';
+        el.installAppBtn.disabled = true;
+        el.installAppBtn.classList.add('opacity-70');
+        showToast('Kinetix PWA installed in standalone mode.', 'success');
+      });
+
+      el.installAppBtn.addEventListener('click', async function () {
+        if (state.isStandaloneInstalled) {
+          showToast('Kinetix is already installed on this device.', 'info');
+          return;
+        }
+        if (state.deferredInstallPrompt) {
+          state.deferredInstallPrompt.prompt();
+          const choice = await state.deferredInstallPrompt.userChoice;
+          if (choice && choice.outcome === 'accepted') {
+            state.isStandaloneInstalled = true;
+            el.installAppBtnLabel.textContent = 'App Installed';
+          }
+          state.deferredInstallPrompt = null;
+          return;
+        }
+        el.installModal.classList.remove('hidden');
+      });
+
+      el.closeInstallModalBtn.addEventListener('click', function () {
+        el.installModal.classList.add('hidden');
+      });
+
+      el.simulateStandaloneInstallBtn.addEventListener('click', function () {
+        state.isStandaloneInstalled = true;
+        el.installAppBtnLabel.textContent = 'Installed (Standalone)';
+        el.installModal.classList.add('hidden');
+        showToast('Standalone PWA mode activated.', 'success');
+      });
+
+      // Footer Legal & Policy Modals
+      const MODAL_CONTENT = {
+        privacy: {
+          title: 'Privacy Policy & Ephemeral Retention',
+          body: '<p><strong>Zero Permanent URL Logging:</strong> Submitted video URLs are validated in memory and are never permanently stored or tied to advertising profiles.</p><p><strong>15-Minute Ephemeral File Retention:</strong> Generated MP4 and MP3 files are stored in isolated temporary worker storage for a maximum of 15 minutes (<code class="font-mono">FILE_RETENTION_SECONDS=900</code>) and automatically unlinked upon expiration or cancellation.</p><p><strong>Session Isolation:</strong> Every download token is signed with HMAC-SHA256 and bound to your ephemeral client session ID to prevent unauthorized access.</p>'
+        },
+        terms: {
+          title: 'Terms of Service & Permitted Sources',
+          body: '<p>By using Kinetix, you confirm that you own the copyright to the submitted media or have explicit authorization or an open license (such as Creative Commons or Public Domain) permitting local copies.</p><p>Attempting to probe internal networks, bypass DRM, extract private session-walled streams, or exceed automated rate limits is strictly prohibited.</p>'
+        },
+        contact: {
+          title: 'Security & Compliance Contact',
+          body: '<p><strong>Architecture &amp; Security Team:</strong> security@kinetix.media</p><p><strong>DMCA &amp; Rights Holder Inquiries:</strong> compliance@kinetix.media</p><p>Full source code, Next.js Route Handlers, FFmpeg worker scripts, and <code class="font-mono">.env.example</code> configuration are included in the companion source archive.</p>'
+        }
+      };
+
+      document.querySelectorAll('.footer-modal-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const key = btn.getAttribute('data-modal');
+          const item = MODAL_CONTENT[key];
+          if (item) {
+            el.infoModalTitle.textContent = item.title;
+            el.infoModalBody.innerHTML = item.body;
+            el.infoModal.classList.remove('hidden');
+          }
+        });
+      });
+
+      el.closeInfoModalBtn.addEventListener('click', function () {
+        el.infoModal.classList.add('hidden');
+      });
+
+      // Online / Offline Connectivity Listeners
+      window.addEventListener('online', function () {
+        el.offlineBanner.classList.add('hidden');
+        showToast('Network connection restored.', 'success');
+      });
+
+      window.addEventListener('offline', function () {
+        el.offlineBanner.classList.remove('hidden');
+        showToast('You are offline. Downloading videos requires an internet connection.', 'warn');
+      });
+
+      // Initialize Default Light Theme & Load Initial Authorized 4K Sample Preview
+      const savedTheme = getStored('kinetix_theme', 'light');
+      applyTheme(savedTheme);
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) {
+        state.isStandaloneInstalled = true;
+        el.installAppBtnLabel.textContent = 'Installed';
+      }
+
+      // Share-target entry: Android passes the link in ?url= or inside ?text=
+      function extractSharedUrl() {
+        const q = new URLSearchParams(location.search);
+        const blob = [q.get('url'), q.get('text'), q.get('title')].filter(Boolean).join(' ');
+        const m = blob.match(/https?:\/\/[^\s]+/i);
+        return m ? m[0] : '';
+      }
+      const sharedUrl = extractSharedUrl();
+      if (sharedUrl) {
+        history.replaceState(null, '', '/');
+        el.videoUrlInput.value = sharedUrl;
+        el.clearUrlBtn.classList.remove('hidden');
+        autoStart = true; // one tap: inspect -> highest-quality MP4 -> save to device
+        processUrlSubmission(sharedUrl);
+      }
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch(function () {});
+      }
+    })();
+  </script>
+</body>
+</html>

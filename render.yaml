@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: kinetix-api
+    runtime: docker
+    plan: starter
+    healthCheckPath: /healthz
+    envVars:
+      - key: TOKEN_SECRET
+        generateValue: true
+      - key: CORS_ORIGIN
+        sync: false
