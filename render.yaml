@@ -1,11 +1,17 @@
 services:
   - type: web
-    name: kinetix-api
+    name: kinetix-backend
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /healthz
     envVars:
       - key: TOKEN_SECRET
         generateValue: true
       - key: CORS_ORIGIN
-        sync: false
+        value: "*"
+      - key: FILE_RETENTION_SECONDS
+        value: "900"
+      - key: MAX_CONCURRENT
+        value: "2"
+      - key: PORT
+        value: "3000"
